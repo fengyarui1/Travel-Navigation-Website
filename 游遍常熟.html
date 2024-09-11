@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>游遍常熟</title>
+    <link rel="stylesheet" href="游遍常熟.css" type="text/css" >
+    <script type="text/javascript">
+         function changeImage(imageNumber) {  
+            var mainPicture = document.getElementById('mainPicture');  
+            mainPicture.src = 'images/picture' + imageNumber + '.jpg';  
+             switch(imageNumber) {  
+            case 1:  
+                textArea.innerHTML = "虞山";  
+                var p = document.createElement('p');  
+                p.innerHTML = "虞山国家森林公园位于沙家浜畔、阳澄湖边。东南端伸入历史文化名城——江苏省常熟市，西南方与尚湖相依。公园处于北亚热带的边缘，其森林植被类型以亚热带常绿落叶桂叶混交林为主。虞山国家森林公园总面积1260公顷。虞山国家森林公园依偎着历史名城，和一批光芒四射的历史名人息息相关，文脉史迹极为丰富。虞山东岭，有商周逊国的仲雍墓及南方夫子言子墓；西岭，有商相巫咸墓、春秋石室、龙门摩崖石刻；齐梁古刹——兴福禅寺，坐落于北麓深山幽谷中，寺中堪称三绝的唐诗、宋书、清刻的常建《题破山寺后禅院》石碑，千古传颂。虞山还有元代大画家黄公望、民族英雄瞿式耜、清朝两代帝师翁同龢、两弹元勋王淦昌等人的墓园和文物，常熟深厚的文化积淀在这儿得到了充分的体现。";  
+                textArea.appendChild(p);  
+                break;    
+            case 2:  
+                textArea.innerHTML = "沙家浜";  
+                var p = document.createElement('p');  
+                p.innerHTML = "沙家浜风景区，位于江苏省常熟市南隅、沙家浜镇镇区东侧，属于阳澄湖水系，周边水网密布，交通便利，经济快速发展，面积约6000亩，现在是国家5A级景区、国家湿地公园、全国百家红色旅游经典景区、全国爱国主义教育示范基地、全国科普教育基地、国家城市湿地公园、入选“第一批全国中小学生研学实践教育基地”、国务院“国家级抗战纪念设施、遗址名录”。";  
+                textArea.appendChild(p);  
+                break;    
+            case 3:  
+                textArea.innerHTML = "方塔";  
+                var p = document.createElement('p');  
+                p.innerHTML = "方塔园位于常熟古城东端，紧邻古城繁华的商业街方塔街，系在宋代古迹旧址上新建的仿宋写意山水园林，全园总占地面积约3万平方米，现为国家4A级旅游景区。方塔园因方塔而得名，园中方塔、古井、古银杏树并称“方塔三宝”。方塔为常熟古城常熟标志性建筑，原名“崇教兴福塔”，四面九层，砖木结构楼阁式，平面呈方形，俗称方塔。";  
+                textArea.appendChild(p);  
+                break;   
+                 }
+        }  
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+           window.onload = function() {  
+            alert("欢迎来到本网站！！");  
+        };  
+    </script>
+    <div id="logo">
+        <div id="logo1"><img src="images/changshu.jpg" style="width:250px;height: 100px;"></div>
+    </div>
+    <div class="navbar">  
+        <a href="#">简介</a>  
+        <a href="#">名胜</a>  
+        <a href="#">文化</a>  
+        <a href="#">美食</a>  
+        <a href="游遍常熟登录.html">登录</a>  
+    </div>  
+    <div id="image-gallery">  
+        <img class="active" src="images/image1.jpg" alt="Image 1">  
+        <img src="images/image2.jpg" alt="Image 2">  
+        <img src="images/image3.jpg" alt="Image 3">  
+        <img src="images/image4.jpg" alt="Image 4">  
+        <img src="images/image5.jpg" alt="Image 5">  
+        <button id="prev-btn">上一张</button>  
+        <button id="next-btn">下一张</button> 
+    </div> 
+    <script>  
+        var currentIndex = 0;  
+        var images = document.querySelectorAll('#image-gallery img');  
+        var imageCount = images.length;  
+        var autoSwitchInterval = 6000; // 6秒自动切换图片  
+  
+        // 自动切换图片函数  
+        function autoSwitchImage() {  
+            images[currentIndex].classList.remove('active');  
+            currentIndex = (currentIndex + 1) % imageCount; // 循环到第一张或最后一张图片  
+            images[currentIndex].classList.add('active');  
+        }  
+  
+        // 上一张图片按钮点击事件处理函数  
+        document.getElementById('prev-btn').addEventListener('click', function() {  
+            images[currentIndex].classList.remove('active');  
+            currentIndex = (currentIndex - 1 + imageCount) % imageCount; // 循环到前一张图片或最后一张图片  
+            images[currentIndex].classList.add('active');  
+        });  
+  
+        // 下一张图片按钮点击事件处理函数  
+        document.getElementById('next-btn').addEventListener('click', function() {  
+            images[currentIndex].classList.remove('active');  
+            currentIndex = (currentIndex + 1) % imageCount; // 循环到下一张图片或最后一张图片  
+            images[currentIndex].classList.add('active');  
+        });  
+  
+        // 设置初始自动切换时间间隔（毫秒）和开始自动切换图片函数  
+        setInterval(autoSwitchImage, autoSwitchInterval);  
+    </script>
+    <hr style="width:70% ; color: black; size: 5px;">
+    <div id="content">
+        <h3>游遍常熟</h3>
+        <div id="textArea">虞山
+            <p>虞山国家森林公园位于沙家浜畔、阳澄湖边。东南端伸入历史文化名城——江苏省常熟市，西南方与尚湖相依。公园处于北亚热带的边缘，其森林植被类型以亚热带常绿落叶桂叶混交林为主。虞山国家森林公园总面积1260公顷。虞山国家森林公园依偎着历史名城，和一批光芒四射的历史名人息息相关，文脉史迹极为丰富。虞山东岭，有商周逊国的仲雍墓及南方夫子言子墓；西岭，有商相巫咸墓、春秋石室、龙门摩崖石刻；齐梁古刹——兴福禅寺，坐落于北麓深山幽谷中，寺中堪称三绝的唐诗、宋书、清刻的常建《题破山寺后禅院》石碑，千古传颂。虞山还有元代大画家黄公望、民族英雄瞿式耜、清朝两代帝师翁同龢、两弹元勋王淦昌等人的墓园和文物，常熟深厚的文化积淀在这儿得到了充分的体现。</p>
+        </div> 
+        <div id="littlePicture">  
+            <div id="littlePicture1" onmousemove="changeImage(1)"><img src="images/picture1.jpg"></div>  
+            <div id="littlePicture2" onmousemove="changeImage(2)"><img src="images/picture2.jpg"></div>  
+            <div id="littlePicture3" onmousemove="changeImage(3)"><img src="images/picture3.jpg"></div>  
+        </div>   
+        <div id="picture"><img id="mainPicture" src="images/picture1.jpg" style="width:400px;height: 300px;"></div>
+        <div id="otherArea">
+            <h4>常熟其他景点</h4>
+            <ul>
+                <li><a href="https://www.csyssh.com/shanghu.html">尚湖</a></li>
+                <li><a href="https://www.csyssh.com/intro/18.html">赵园·曾园</a></li>
+                <li><a href="https://www.csyssh.com/intro/15.html">南湖荡湿地公园</a></li>
+            </ul>
+        </div>
+        <hr style="width:70% ; color: black; size: 5px;">
+        <div class="slider">  
+            <div class="slider-images">  
+                  <img src="images/gun1.jpg" alt="Image 1" id="img1">  
+                  <img src="images/gun2.jpg" alt="Image 2" id="img2">  
+                  <img src="images/gun3.jpg" alt="Image 3" id="img3">  
+                  <img src="images/gun4.jpg" alt="Image 4" id="img4">  
+                  <img src="images/gun5.jpg" alt="Image 5" id="img5">  
+                  <img src="images/gun6.jpg" alt="Image 6" id="img6">
+                  <img src="images/gun1.jpg" alt="Image 1" id="img1">  
+                  <img src="images/gun2.jpg" alt="Image 2" id="img2">  
+                  <img src="images/gun3.jpg" alt="Image 3" id="img3">  
+                  <img src="images/gun4.jpg" alt="Image 4" id="img4">  
+                  <img src="images/gun5.jpg" alt="Image 5" id="img5">  
+                  <img src="images/gun6.jpg" alt="Image 6" id="img6">    
+            </div>  
+          </div>
+          </div>  
+          <div id="modal" class="modal">  
+              <span class="close">&times;</span>  
+              <img class="modal-content" id="img01">  
+              <div id="caption"></div>  
+          </div>  
+          <script>  
+            const sliderImages = document.querySelectorAll('.slider-images img');  
+            let pauseSlide = false; // 用于跟踪是否应暂停幻灯片动画  
+          
+            // 为每个图片添加事件监听器，以检测鼠标进入和离开事件  
+            sliderImages.forEach((img, index) => {  
+              const imgId = img.id; // 获取图片的id，以便稍后使用它来恢复动画  
+              const imgWrapper = document.querySelector(`#${imgId}`); // 选择包含该图片的父元素（可能是一个伪元素）  
+              imgWrapper.addEventListener('mouseover', () => { // 当鼠标进入图片时，暂停幻灯片动画  
+                pauseSlide = true; // 设置标志为true，表示应暂停幻灯片动画  
+                document.querySelector('.slider-images').style.animationPlayState = 'paused'; // 暂停幻灯片动画的播放状态  
+              });  
+              imgWrapper.addEventListener('mouseout', () => { // 当鼠标离开图片时，恢复幻灯片动画  
+                pauseSlide = false; // 设置标志为false，表示应恢复幻灯片动画的播放状态  
+                document.querySelector('.slider-images').style.animationPlayState = 'running'; // 恢复幻灯片动画的播放状态  
+              });  
+            });  
+                // 获取模态窗口元素  
+            var modal = document.getElementById("modal");  
+            var modalImg = document.getElementById("img01");  
+            var captionText = document.getElementById("caption");  
+            var images1 = document.querySelectorAll('.slider-images img'); // 获取所有小图元素  
+            var bigImages = ['images/gunBig1.jpg', 'images/gunBig2.jpg', 'images/gunBig3.jpg', 'images/gunBig4.jpg', 'images/gunBig5.jpg', 'images/gunBig6.jpg','images/gunBig1.jpg', 'images/gunBig2.jpg', 'images/gunBig3.jpg', 'images/gunBig4.jpg', 'images/gunBig5.jpg', 'images/gunBig6.jpg']; // 大图文件名数组  
+              
+            // 为每个小图元素添加点击事件监听器  
+            for (var i = 0; i < images1.length; i++) {  
+              images1[i].addEventListener('click', function(e) {  
+                // 获取点击的图片的索引  
+                var index = Array.prototype.indexOf.call(images1, e.target);  
+                // 设置模态窗口中的大图和标题文本内容  
+                modal.style.display = "block";  
+                modalImg.src = bigImages[index];  
+                captionText.innerHTML = e.target.alt; // 使用小图的alt属性作为标题文本内容  
+              });  
+            }  
+            // 获取 <span> 元素，设置关闭按钮的点击事件监听器  
+            var span = document.getElementsByClassName("close")[0];  
+            span.addEventListener('click', function() {   
+              modal.style.display = "none"; // 关闭模态窗口时隐藏模态窗口元素  
+            });  
+          </script>  
+    </div>
+    <div id="footer">
+        <p>
+            <a href="#">联系我们</a>　|　 
+            <a href="#">收藏本站</a>　|　 
+            <a href="#">人才招聘</a>　|　 
+            <a href="http://www.foheart.org">开源社区</a>　|　
+            <a href="游遍常熟登录.html">后台登录</a>
+        </p>
+        <p>冯阳睿 022022105</p>
+        <p class="copy">&copy; 常熟理工学院计算机科学与工程学院</p>
+    </div>
+</body>
+</html>
