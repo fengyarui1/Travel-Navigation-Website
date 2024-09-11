@@ -1,0 +1,186 @@
+        #logo{
+            width: 100%;
+            height: 120px;
+            background-image: url("images/logo.jpg");
+            position: relative;
+        }
+        #logo1{
+            top: 10px;
+            left: 20px;
+            position: absolute;
+        }
+          .navbar {  
+            height: 50px;  
+            background-color: #333;  
+            color: white;  
+        }  
+  
+        .navbar a {  
+            color: white;  
+            text-decoration: none;  
+            padding: 14px 20px;  
+            display: inline-block;  
+        }  
+  
+        .navbar a:hover {  
+            background-color: #111;  
+            color: white;  
+        }  
+         #image-gallery {  
+            width: 100%;  
+            height: 300px;  
+            overflow: hidden;  
+            position: relative;  /* 设置图片框为相对定位 */  
+        }  
+  
+        #image-gallery img {  
+            width: 100%;  
+            height: 300px;  
+            display: none;  
+        }  
+  
+        #image-gallery img.active {  
+            display: block;  
+        }
+        #prev-btn, #next-btn {  
+            position: absolute;      
+            width: 60px;       
+            height: 30px;     
+        }  
+  
+        #prev-btn {  
+            left: 10px; 
+            bottom: 135px;     
+        }  
+  
+        #next-btn {  
+            right: 10px;
+            bottom: 135px;       
+        }  
+        #content{
+            width: 1000px;
+            height: auto;
+            margin: auto;
+            position: relative;
+
+        } 
+        #littlePicture{
+            width: 150px;
+            height: 300px;
+            background-color: gray;
+          float: left;
+          margin-right: 5px;
+          position: relative;
+        }
+        #littlePicture img{
+            width:140px;
+            height:90px;
+        }
+        #littlePicture1{
+            position: absolute;
+            left: 5px;
+            top: 10px;
+        }
+        #littlePicture2{
+            position: absolute;
+            left: 5px;
+            top: 110px;
+        }
+        #littlePicture3{
+            position: absolute;
+            left: 5px;
+            top: 205px;
+        }
+         #textArea{  
+            float: right; 
+            width: 430px;  
+            height: 150px;  
+            border: 1px solid black;  
+            padding: 5px;  
+            overflow: auto;  
+            font-size: 25px;
+            text-align: center;
+        } 
+        #textArea p{
+            text-align: left;
+            font-size: 15px;
+            text-indent: 2em;
+        } 
+        #otherArea{
+            width: 442px;
+            height: 130px;
+            border: 1px solid black;
+            position: absolute;
+            left: 558px;
+            top: 210px;
+        }
+        .slider {  
+            width: 1000px;  
+            overflow: hidden;  
+            position: relative;  
+        }  
+  
+        .slider-images {  
+            display: flex;  
+            animation: slide 50s linear infinite;  
+        }  
+  
+        .slider-images img {  
+            width: 300px;  
+            height: auto;  
+            margin-right: 15px;  
+        }  
+  
+        @keyframes slide {  
+            0% { transform: translateX(0px); }  
+            100% { transform: translateX(-1890px); }  
+        } 
+         .modal {  
+            display: none;  
+            position: fixed;  
+            z-index: 1;  
+            padding-top: 100px;  
+            left: 0;  
+            top: 0;  
+            width: 100%;  
+            height: 100%;  
+            overflow: auto;  
+            background-color: rgb(0,0,0);  
+            background-color: rgba(0,0,0,0.9);  
+        }  
+  
+        .modal-content {  
+            margin: auto;  
+            display: block;  
+            width: 80%;  
+            max-width: 700px;  
+        }  
+  
+        .close {  
+           position: absolute;  
+           top: 15px;  
+           right: 35px;  
+           color: #f1f1f1;  
+           font-size: 40px;  
+           font-weight: bold;  
+           transition: 0.3s;  
+        }  
+  
+        .close:hover,  
+        .close:focus {  
+           color: #bbb;  
+           text-decoration: none;  
+           cursor: pointer;  
+        }
+         #footer{
+            width: 1000px;
+            height: 50px;
+            z-index: 100;
+            color: #777;
+            line-height: 25px;
+            margin: auto;
+            text-align: center;
+        }
+        #footer a:link{
+            color: #777;
+        }
